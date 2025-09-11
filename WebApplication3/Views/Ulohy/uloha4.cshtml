@@ -1,0 +1,19 @@
+﻿<head>
+	<link rel="stylesheet" href="~/css/uloha1.css"/>
+</head>
+<div class="text-center">
+	<table>
+		<tr>
+			<th class="display-4">Meno</th>
+			<th class="display-4">Priezvisko</th>
+			<th class="display-4">Email</th>
+		</tr>
+	@foreach(var user in Model){
+		<tr>
+		<td class="display-4"> @user.Name</td>
+		<td class="display-4"> @user.Surname</td>
+		<td class="display-4"> @user.Email</td>
+		</tr>
+	}
+	</table>
+</div>
