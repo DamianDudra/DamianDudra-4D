@@ -1,18 +1,18 @@
 ﻿<head>
-	<link rel="stylesheet" href="~/css/uloha1.css"/>
+	<link rel="stylesheet" href="~/css/uloha4.css"/>
 </head>
 <div class="text-center">
 	<table>
 		<tr>
-			<th class="display-4">Meno</th>
-			<th class="display-4">Priezvisko</th>
-			<th class="display-4">Email</th>
+			<th>Meno</th>
+			<th>Priezvisko</th>
+			<th>Email</th>
 		</tr>
 	@foreach(var user in Model){
 		<tr>
-		<td class="display-4"> @user.Name</td>
-		<td class="display-4"> @user.Surname</td>
-		<td class="display-4"> @user.Email</td>
+		<td>@user.Name</td>
+		<td>@user.Surname</td>
+		<td>@user.Email</td>
 		</tr>
 	}
 	</table>

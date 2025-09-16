@@ -2,7 +2,7 @@
 	<link rel="stylesheet" href="~/css/uloha5.css" />
 </head>
 @model List<UserInfo>
-<div class="cards">
+<div class="grid">
 	@foreach(var user in Model){
 		<partial name="_UserCard" model="user" />
 	}
