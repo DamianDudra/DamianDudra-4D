@@ -53,5 +53,17 @@ namespace WebApplication3.Controllers
                 } };
             return View(userList);
         }
+        public IActionResult uloha6()
+        {
+            return View();
+        }
+        public IActionResult uloha7()
+        {
+            return View();
+        }
+        public IActionResult uloha8()
+        {
+            return View();
+        }
     }
 }
