@@ -22,11 +22,12 @@ function klik() {
 }
 
 
-.addEventListener("submit", (event) => {
-	let znaky = document.getElementById('Textbox').value.length;
-	if (znaky >= 20) {
-		let karta1 = document.getElementById("Textbox");
-		karta1.style.outline = "green";
-        classlist.add("good/bad");
-	}
-})
+
+//.addEventListener("submit", (event) => {
+//	let znaky = document.getElementById('Textbox').value.length;
+//	if (znaky >= 20) {
+//		let karta1 = document.getElementById("Textbox");
+//		karta1.style.outline = "green";
+//        classlist.add("good/bad");
+//	}
+//})

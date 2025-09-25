@@ -65,5 +65,34 @@ namespace WebApplication3.Controllers
         {
             return View();
         }
+        public IActionResult uloha9()
+        {
+            return View();
+        }
+        private static List<User> users = new List<User>();
+
+        [HttpGet]
+        public IActionResult LoginForm()
+        {
+            return View(new User());
+        }
+
+        [HttpPost]
+        public IActionResult LoginForm(User model)
+        {
+            var user = new User()
+            {
+                UserPublicId = Guid.NewGuid(),
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+                Age = model.Age,
+                Password = model.Password,
+                Vlastnosti = model.Vlastnosti
+            };
+            users.Add(user);
+            ViewBag.Users = users;
+            return View("Register", user);
+        }
     }
 }

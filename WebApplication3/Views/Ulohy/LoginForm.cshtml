@@ -1,0 +1,35 @@
+﻿<h1>Login</h1>
+<div id="loginForm">
+    <form method="post" asp-controller="Ulohy" asp-action="LoginForm">
+        <input type="text" name="FirstName" placeholder="FirstName" required />
+        <input type="text" name="LastName" placeholder="LastName" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="number" name="Age" placeholder="Age" required />
+        <input type="password" name="Password" placeholder="Password" required />
+		<input id="todoitem" type="text" name="ToDoList" placeholder="ToDoList" />
+        <input id="hidden" type="hidden" name="List" placeholder="List" />  
+        <button type="button" id="pridaj"> + </button>
+		<div id="todoItems">
+			<p>To Do Items:</p>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+      const Vlastnosti=[];
+      var button=document.getElementById("pridaj");
+      button.addEventListener("click", function() {
+      newitem=document.getElementById("todoitem").value;
+	  Vlastnosti.push(newitem);
+	  var item=document.createElement("p");
+      item.textContent=newitem;
+      document.getElementById("todoItems").appendChild(item);
+	  document.getElementById("todoitem").value="";
+    });
+	    var form=document.getElementById("loginForm");
+		  form.addEventListener("submit", function() {
+		  document.getElementById("hidden").value=Vlastnosti;
+		  });
+	  
+</script>

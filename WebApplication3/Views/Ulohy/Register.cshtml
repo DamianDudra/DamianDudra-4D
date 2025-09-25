@@ -1,0 +1,12 @@
+﻿@model WebApplication3.Models.User
+
+<div> First name: @Model.FirstName</div>
+<div> Last name: @Model.LastName</div>
+<div> Email: @Model.Email</div>
+<div> Age: @Model.Age</div>
+<div> Password: @Model.Password</div>
+
+	@foreach (var user in @Model.Vlastnosti)
+	{
+			<div> @user</div>
+	}
